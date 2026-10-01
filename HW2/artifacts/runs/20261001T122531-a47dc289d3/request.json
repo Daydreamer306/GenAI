@@ -1,0 +1,14 @@
+{
+  "session_id": "comparison",
+  "turn_id": "339af0c13db2461b90e0b1e2a67ade9b",
+  "query": "{\"tool_name\": \"entropy\", \"arguments\": {\"probabilities\": [0.5, 0.5]}}",
+  "history": [],
+  "planner": "rules",
+  "enabled_skills": null,
+  "enable_rag": true,
+  "enable_tools": true,
+  "mcp_enabled": true,
+  "enable_review": false,
+  "max_rounds": null,
+  "structured_answer": true
+}

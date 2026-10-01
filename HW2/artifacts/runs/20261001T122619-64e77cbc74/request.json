@@ -1,0 +1,14 @@
+{
+  "session_id": "comparison",
+  "turn_id": "4e77b1622bd84d0d8a5e769ede777335",
+  "query": "{\"tool_name\": \"ohms_law\", \"arguments\": {\"voltage\": {\"value\": 12, \"unit\": \"V\"}, \"resistance\": {\"value\": 6, \"unit\": \"Ohm\"}}}",
+  "history": [],
+  "planner": "rules",
+  "enabled_skills": null,
+  "enable_rag": true,
+  "enable_tools": true,
+  "mcp_enabled": true,
+  "enable_review": false,
+  "max_rounds": null,
+  "structured_answer": true
+}

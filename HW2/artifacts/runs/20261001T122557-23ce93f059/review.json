@@ -1,0 +1,24 @@
+{
+  "outcome": "unreviewed",
+  "stop_reason": "review_disabled",
+  "rounds": [
+    {
+      "number": 1,
+      "solver_result": {
+        "text": "## 信息熵计算\n\n### 已知量与目标\n\n- **输入**：概率分布 $P = [0.25, 0.25, 0.25, 0.25]$\n- **目标**：计算香农熵 $H(X)$\n\n### 公式与适用条件\n\n采用香农熵公式（以 2 为底，单位为 bit）：\n\n$$H(X) = -\\sum_{i=1}^{n} p_i \\log_2(p_i)$$\n\n**适用条件**：概率分布合法（所有 $p_i \\geq 0$，且 $\\sum p_i = 1$）。题目中四个概率均为 0.25，和为 1.0，满足条件。\n\n### 计算过程\n\n这是均匀分布的特殊情况，每个符号概率相等。代入公式：\n\n$$H(X) = -4 \\times (0.25 \\times \\log_2(0.25))$$\n\n由于 $\\log_2(0.25) = \\log_2(2^{-2}) = -2$：\n\n$$H(X) = -4 \\times (0.25 \\times (-2)) = -4 \\times (-0.5) = 2.0 \\text{ bit}$$\n\n### 结果验证\n\n| 符号 | 概率 $p_i$ | 贡献 $-p_i \\log_2(p_i)$ |\n|------|-----------|------------------------|\n| 1 | 0.25 | 0.5 bit |\n| 2 | 0.25 | 0.5 bit |\n| 3 | 0.25 | 0.5 bit |\n| 4 | 0.25 | 0.5 bit |\n| **总和** | **1.0** | **2.0 bit** |\n\n各符号贡献相同，总熵为各贡献之和，结果合理。\n\n### 结论\n\n该均匀分布的信息熵为 **2.0 bit**。\n\n---\n\n<final_answer>{\"value\": 2.0, \"unit\": \"bit\"}</final_answer>",
+        "provider": "minimax",
+        "model": "MiniMax-M2.7",
+        "status": "success",
+        "input_tokens": 506,
+        "output_tokens": 592,
+        "reasoning_tokens": 0,
+        "latency_ms": 9178.701041004388,
+        "finish_reason": "stop",
+        "error_type": null,
+        "error": null
+      },
+      "reviewer_result": null,
+      "verdict": null
+    }
+  ]
+}

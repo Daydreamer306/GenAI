@@ -1,0 +1,10 @@
+{"step_id":1,"stage":"input","name":"输入解析","status":"success","summary":"收到 JSON 工具请求。","latency_ms":0.0,"metadata":{"planner":"rules","rag_enabled":true,"tools_enabled":true,"mcp_enabled":true,"skill_limit":null}}
+{"step_id":2,"stage":"planning","name":"direct_json planner","status":"success","summary":"JSON 输入指定调用 entropy。","latency_ms":3.484083994408138,"metadata":{"planner":"direct_json","intent":"calculation","need_rag":false,"skills":["problem_solving"],"tools":["entropy"]}}
+{"step_id":3,"stage":"skill","name":"problem_solving","status":"success","summary":"已将本地 Skill 加入本轮提示词。","latency_ms":0.2006249997066334,"metadata":{}}
+{"step_id":4,"stage":"rag","name":"教材检索","status":"skipped","summary":"规划结果不需要教材证据。","latency_ms":0.0,"metadata":{}}
+{"step_id":5,"stage":"tool","name":"entropy","status":"success","summary":"工具执行成功。","latency_ms":0.017333004507236183,"metadata":{"executor":"mcp_in_process","arguments":{"probabilities":[0.25,0.25,0.25,0.25]},"result":{"entropy":2.0,"unit":"bit","contributions":[0.5,0.5,0.5,0.5],"probability_sum":1.0},"artifacts":[]}}
+{"step_id":6,"stage":"model","name":"Solver 第 1 轮","status":"success","summary":"生成草稿","latency_ms":11405.462332986644,"metadata":{"round":1,"agent":"solver","provider":"minimax","model":"MiniMax-M2.7","input_tokens":508,"output_tokens":822,"error_type":null}}
+{"step_id":7,"stage":"review","name":"Reviewer 第 1 轮","status":"success","summary":"审核已完成","latency_ms":6546.057540996117,"metadata":{"round":1,"agent":"reviewer","provider":"minimax","model":"MiniMax-M2.7","input_tokens":1072,"output_tokens":410,"error_type":null}}
+{"step_id":8,"stage":"gate","name":"审核门 第 1 轮","status":"success","summary":"草稿计算正确，工具结果使用恰当，公式推导一致，final_answer与工具结果和正文一致，符合所有要求。","latency_ms":0.0,"metadata":{"round":1,"approved":true,"summary":"草稿计算正确，工具结果使用恰当，公式推导一致，final_answer与工具结果和正文一致，符合所有要求。","issues":[]}}
+{"step_id":9,"stage":"stop","name":"Harness 停止","status":"success","summary":"review_approved","latency_ms":0.0,"metadata":{"outcome":"passed","rounds":1,"max_rounds":3}}
+{"step_id":10,"stage":"answer","name":"最终回答","status":"success","summary":"返回 0 条引用和 1 个工具结果。","latency_ms":0.0,"metadata":{}}

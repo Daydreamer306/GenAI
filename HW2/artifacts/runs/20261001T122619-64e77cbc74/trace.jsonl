@@ -1,0 +1,8 @@
+{"step_id":1,"stage":"input","name":"输入解析","status":"success","summary":"收到 JSON 工具请求。","latency_ms":0.0,"metadata":{"planner":"rules","rag_enabled":true,"tools_enabled":true,"mcp_enabled":true,"skill_limit":null}}
+{"step_id":2,"stage":"planning","name":"direct_json planner","status":"success","summary":"JSON 输入指定调用 ohms_law。","latency_ms":6.745291990227997,"metadata":{"planner":"direct_json","intent":"calculation","need_rag":false,"skills":["problem_solving"],"tools":["ohms_law"]}}
+{"step_id":3,"stage":"skill","name":"problem_solving","status":"success","summary":"已将本地 Skill 加入本轮提示词。","latency_ms":0.662375008687377,"metadata":{}}
+{"step_id":4,"stage":"rag","name":"教材检索","status":"skipped","summary":"规划结果不需要教材证据。","latency_ms":0.0,"metadata":{}}
+{"step_id":5,"stage":"tool","name":"ohms_law","status":"success","summary":"工具执行成功。","latency_ms":0.03662500239443034,"metadata":{"executor":"mcp_in_process","arguments":{"voltage":{"value":12,"unit":"V"},"resistance":{"value":6,"unit":"Ohm"}},"result":{"unknown":"current","value_si":2.0,"si_unit":"A","display_value":2.0,"display_unit":"A"},"artifacts":[]}}
+{"step_id":6,"stage":"model","name":"Solver 第 1 轮","status":"success","summary":"生成草稿","latency_ms":4052.0507499895757,"metadata":{"round":1,"agent":"solver","provider":"minimax","model":"MiniMax-M2.7","input_tokens":505,"output_tokens":219,"error_type":null}}
+{"step_id":7,"stage":"stop","name":"Harness 停止","status":"success","summary":"review_disabled","latency_ms":0.0,"metadata":{"outcome":"unreviewed","rounds":1,"max_rounds":3}}
+{"step_id":8,"stage":"answer","name":"最终回答","status":"success","summary":"返回 0 条引用和 1 个工具结果。","latency_ms":0.0,"metadata":{}}

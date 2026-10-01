@@ -1,0 +1,8 @@
+[
+  {"id":"entropy-uniform", "tool_name":"entropy", "arguments":{"probabilities":[0.5,0.5]}, "expected":{"value":1.0,"unit":"bit"}},
+  {"id":"entropy-four", "tool_name":"entropy", "arguments":{"probabilities":[0.25,0.25,0.25,0.25]}, "expected":{"value":2.0,"unit":"bit"}},
+  {"id":"ohms-current", "tool_name":"ohms_law", "arguments":{"voltage":{"value":12,"unit":"V"},"resistance":{"value":6,"unit":"Ohm"}}, "expected":{"value":2.0,"unit":"A"}},
+  {"id":"rc-tau", "tool_name":"rc_time_constant", "arguments":{"resistance":{"value":1,"unit":"kOhm"},"capacitance":{"value":1,"unit":"uF"}}, "expected":{"value":0.001,"unit":"s"}},
+  {"id":"convolution", "tool_name":"discrete_convolution", "arguments":{"x":[1,2],"h":[3,4]}, "expected":{"value":[3,10,8],"unit":""}},
+  {"id":"calculator", "tool_name":"scientific_calculator", "arguments":{"expression":"(2+3)*4"}, "expected":{"value":20.0,"unit":""}}
+]

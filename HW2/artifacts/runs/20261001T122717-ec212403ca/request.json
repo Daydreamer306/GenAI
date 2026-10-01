@@ -1,0 +1,14 @@
+{
+  "session_id": "comparison",
+  "turn_id": "749a8ad6fae1499b9372045ff02a08fc",
+  "query": "{\"tool_name\": \"discrete_convolution\", \"arguments\": {\"x\": [1, 2], \"h\": [3, 4]}}",
+  "history": [],
+  "planner": "rules",
+  "enabled_skills": null,
+  "enable_rag": true,
+  "enable_tools": true,
+  "mcp_enabled": true,
+  "enable_review": true,
+  "max_rounds": null,
+  "structured_answer": true
+}

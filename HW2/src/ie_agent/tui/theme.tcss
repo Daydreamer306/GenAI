@@ -1,0 +1,267 @@
+Screen {
+    background: #0b1220;
+    color: #e5edf7;
+}
+
+Header, Footer {
+    background: #111c30;
+    color: #d9e7ff;
+}
+
+#system-status {
+    height: 3;
+    padding: 1 2;
+    background: #14213a;
+    color: #a9c9ff;
+}
+
+#workspace {
+    height: 1fr;
+    layout: horizontal;
+    padding: 1;
+}
+
+#workspace.narrow {
+    layout: vertical;
+}
+
+#chat-panel, #evidence-panel {
+    border: round #35527a;
+    background: #0f192b;
+}
+
+#chat-panel {
+    width: 2fr;
+    margin-right: 1;
+}
+
+#evidence-panel {
+    width: 1fr;
+    min-width: 32;
+}
+
+#workspace.narrow #chat-panel {
+    width: 1fr;
+    height: 2fr;
+    margin-right: 0;
+    margin-bottom: 1;
+}
+
+#workspace.narrow #evidence-panel {
+    width: 1fr;
+    min-width: 0;
+    height: 1fr;
+}
+
+.panel-title {
+    height: 3;
+    padding: 1 2;
+    text-style: bold;
+    background: #162641;
+    color: #79b8ff;
+}
+
+#chat-log {
+    height: 1fr;
+    padding: 1 2;
+}
+
+.chat-bubble {
+    height: auto;
+    min-height: 4;
+    margin-bottom: 1;
+    padding: 1 2;
+    border: round #304a6e;
+}
+
+.chat-bubble.user {
+    background: #17335b;
+    margin-left: 8;
+}
+
+.chat-bubble.assistant {
+    background: #172236;
+    margin-right: 5;
+}
+
+.bubble-role {
+    height: 1;
+    text-style: bold;
+    color: #78b7ff;
+}
+
+.bubble-content {
+    height: auto;
+    margin-top: 1;
+}
+
+#evidence-scroll {
+    height: 1fr;
+}
+
+#evidence-content {
+    height: auto;
+    padding: 1 2;
+}
+
+.chat-artifact {
+    height: auto;
+    margin: 0 2 1 7;
+    padding: 1 2;
+    border: round #304a6e;
+    background: #172236;
+}
+
+.artifact-title {
+    height: 1;
+    text-style: bold;
+    color: #79b8ff;
+}
+
+.artifact-image {
+    width: 1fr;
+    height: 18;
+    margin-top: 1;
+    border: round #304a6e;
+}
+
+.artifact-path, .artifact-missing {
+    height: auto;
+    margin-top: 1;
+    color: #a7bad7;
+}
+
+.artifact-missing {
+    color: #f0b35b;
+}
+
+#input-row {
+    height: 4;
+    padding: 0 1;
+    background: #101a2c;
+}
+
+#question-input {
+    width: 1fr;
+    margin-right: 1;
+}
+
+#send-button {
+    width: 12;
+}
+
+#task-row {
+    height: 2;
+    padding: 0 2;
+    background: #101a2c;
+    color: #9fb4cf;
+}
+
+#loading {
+    width: 5;
+    height: 1;
+    margin-right: 1;
+}
+
+#task-status {
+    width: 1fr;
+    height: 1;
+}
+
+HelpScreen, CapabilityScreen {
+    align: center middle;
+    background: #050a12 70%;
+}
+
+#help-dialog {
+    width: 70;
+    max-width: 90%;
+    height: auto;
+    max-height: 80%;
+    padding: 2 3;
+    border: round #5794d8;
+    background: #14213a;
+}
+
+#close-help {
+    margin-top: 1;
+    width: 16;
+    align-horizontal: center;
+}
+
+#capability-dialog {
+    width: 74;
+    max-width: 92%;
+    height: auto;
+    max-height: 92%;
+    padding: 1 2;
+    border: round #5794d8;
+    background: #14213a;
+}
+
+.dialog-title {
+    height: 1;
+    text-style: bold;
+    color: #79b8ff;
+}
+
+.dialog-hint {
+    height: 1;
+    margin-top: 1;
+    color: #9fb4cf;
+}
+
+.field-title {
+    height: 1;
+    margin-top: 1;
+    text-style: bold;
+    color: #a9c9ff;
+}
+
+#planner-select {
+    width: 1fr;
+}
+
+#capability-list {
+    width: 1fr;
+    height: 6;
+    padding: 0 1;
+    border: round #35527a;
+    background: #0f192b;
+    color: #e5edf7;
+}
+
+#capability-list > .option-list--option-highlighted {
+    background: #79b8ff;
+    color: #0b1220;
+    text-style: bold;
+}
+
+#capability-list > .selection-list--button {
+    background: #0f192b;
+    color: #65748b;
+}
+
+#capability-list > .selection-list--button-selected {
+    background: #0f192b;
+    color: #8bd5a0;
+    text-style: bold;
+}
+
+#capability-list > .selection-list--button-highlighted,
+#capability-list > .selection-list--button-selected-highlighted {
+    background: #79b8ff;
+    color: #0b1220;
+    text-style: bold;
+}
+
+#capability-actions {
+    height: 3;
+    margin-top: 1;
+    align-horizontal: center;
+}
+
+#capability-actions Button {
+    min-width: 12;
+    margin: 0 1;
+}

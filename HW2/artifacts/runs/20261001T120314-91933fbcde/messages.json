@@ -1,0 +1,26 @@
+[
+  {
+    "round_number": 1,
+    "sender": "solver",
+    "recipient": "reviewer",
+    "content": "## RC 时间常数计算\n\n### 1. 已知量和待求量\n\n**已知量：**\n- 电阻 $R = 1\\ \\text{k}\\Omega = 1000\\ \\Omega$\n- 电容 $C = 1\\ \\mu\\text{F} = 10^{-6}\\ \\text{F}$\n\n**待求量：**\n- RC 电路的时间常数 $\\tau$\n\n### 2. 公式及适用条件\n\n**采用公式：**\n$$\\tau = R \\times C$$\n\n**适用条件：**\n- 该公式适用于由电阻和电容串联或并联组成的简单 RC 电路\n- 计算的是电路的时间常数（充放电速度的特征参数）\n- 对于一阶 RC 电路，时间常数定义为电容电压变化至最终值的约 63.2% 所需的时间\n\n### 3. 计算过程\n\n**统一单位后代入：**\n$$\\tau = 1000\\ \\Omega \\times 10^{-6}\\ \\text{F}$$\n\n$$\\tau = 10^{-3}\\ \\text{s}$$\n\n### 4. 结果及检验\n\n**最终结果：**\n$$\\boxed{\\tau = 1.0\\ \\text{ms}}$$\n\n**数量级检验：**\n- 1 kΩ × 1 μF 组合是电子学中非常常见的时间常数尺度\n- 1 ms 意味着电容充放电过程相对较快，适合低频信号处理应用\n- 量纲检验：$\\Omega \\times \\text{F} = \\frac{\\text{V}}{\\text{A}} \\times \\frac{\\text{C}}{\\text{V}} = \\frac{\\text{C}}{\\text{A}} = \\text{s}$ ✓\n\n---\n\n<final_answer>{\"value\": 1.0, \"unit\": \"ms\"}</final_answer>"
+  },
+  {
+    "round_number": 1,
+    "sender": "reviewer",
+    "recipient": "solver",
+    "content": "{\"approved\":false,\"summary\":\"审核门驳回，需修订。\",\"issues\":[\"final_answer 数值或 SI 单位与真实工具结果不一致。\"]}"
+  },
+  {
+    "round_number": 2,
+    "sender": "solver",
+    "recipient": "reviewer",
+    "content": "## RC 时间常数计算（修订版）\n\n### 1. 已知量和待求量\n\n**已知量：**\n- 电阻 $R = 1\\ \\text{k}\\Omega = 1000\\ \\Omega$\n- 电容 $C = 1\\ \\mu\\text{F} = 10^{-6}\\ \\text{F}$\n\n**待求量：**\n- RC 电路的时间常数 $\\tau$\n\n### 2. 公式及适用条件\n\n**采用公式：**\n$$\\tau = R \\times C$$\n\n**适用条件：**\n- 该公式适用于由电阻和电容串联或并联组成的简单 RC 电路\n- 时间常数定义为电容电压变化至最终值的约 63.2% 所需的时间\n\n### 3. 计算过程\n\n**统一单位后代入：**\n$$\\tau = 1000\\ \\Omega \\times 10^{-6}\\ \\text{F} = 10^{-3}\\ \\text{s} = 0.001\\ \\text{s}$$\n\n### 4. 结果及检验\n\n**最终结果：**\n$$\\boxed{\\tau = 0.001\\ \\text{s}}$$\n\n**数量级检验：**\n- 1 kΩ × 1 μF = 1 ms = 0.001 s\n- 量纲检验：$\\Omega \\times \\text{F} = \\frac{\\text{V}}{\\text{A}} \\times \\frac{\\text{C}}{\\text{V}} = \\frac{\\text{C}}{\\text{A}} = \\text{s}$ ✓\n\n---\n\n<final_answer>{\"value\": 0.001, \"unit\": \"s\"}</final_answer>"
+  },
+  {
+    "round_number": 2,
+    "sender": "reviewer",
+    "recipient": "harness",
+    "content": "{\"approved\":true,\"summary\":\"解答正确。单位换算(1kΩ=1000Ω, 1μF=10^-6F)准确，公式τ=RC使用正确，计算结果τ=0.001s与工具返回值(time_constant_seconds: 0.001)一致，量纲检验(Ω·F=s)通过，final_answer的value和unit与正文及工具结果完全一致。\",\"issues\":[]}"
+  }
+]

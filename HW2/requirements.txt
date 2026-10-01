@@ -1,0 +1,17 @@
+# Lightweight TF-IDF runtime. Prefer uv sync --locked for exact versions.
+fastapi>=0.115,<1
+matplotlib>=3.10,<4
+mcp>=1.28,<2
+numpy>=2,<3
+numexpr>=2.10,<3
+openai>=2,<3
+pydantic>=2,<3
+pydantic-settings>=2,<3
+pylatexenc>=2.10,<3
+pyyaml>=6,<7
+rich>=14,<15
+scikit-learn>=1.7,<2
+textual>=6,<7
+textual-image>=0.13,<1
+typer>=0.16,<1
+uvicorn>=0.34,<1

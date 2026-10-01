@@ -1,0 +1,31 @@
+questions:
+  - question: 什么是理性智能体，PEAS描述包含哪些要素？
+    course: artificial_intelligence
+    expected_source_ids: [artificial-intelligence-modern-approach-4]
+  - question: A星搜索中一致启发式函数应满足什么条件？
+    course: artificial_intelligence
+    expected_source_ids: [artificial-intelligence-modern-approach-4]
+  - question: 连续时间卷积积分的图示计算步骤是什么？
+    course: signals_and_systems
+    expected_source_ids: [signals-and-systems-2]
+  - question: 奈奎斯特采样定理对采样频率有什么要求？
+    course: signals_and_systems
+    expected_source_ids: [signals-and-systems-2]
+  - question: 离散信源的信息熵如何定义和计算？
+    course: information_theory
+    expected_source_ids: [information-theory-and-coding]
+  - question: 怎样用卡诺图化简逻辑函数？
+    course: digital_systems
+    expected_source_ids: [digital-electronics-6]
+  - question: 命题逻辑中的德摩根律是什么？
+    course: discrete_mathematics
+    expected_source_ids: [discrete-mathematics-foundations]
+  - question: 高斯定理如何用于计算电场强度？
+    course: electromagnetics
+    expected_source_ids: [electromagnetics-2]
+  - question: 马尔可夫链的平稳分布满足什么方程？
+    course: stochastic_processes
+    expected_source_ids: [applied-stochastic-processes-2]
+  - question: 数字系统设计实验中组合逻辑电路如何验证？
+    course: digital_systems
+    expected_source_ids: [digital-system-design-lab-2]

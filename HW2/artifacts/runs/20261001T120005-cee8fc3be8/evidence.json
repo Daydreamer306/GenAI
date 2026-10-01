@@ -1,0 +1,21 @@
+{
+  "query": "{\"tool_name\":\"entropy\",\"arguments\":{\"probabilities\":[0.5,0.5]}}",
+  "history": [],
+  "sources": [],
+  "tool_evidence": [
+    {
+      "tool_name": "entropy",
+      "result": {
+        "entropy": 1.0,
+        "unit": "bit",
+        "contributions": [
+          0.5,
+          0.5
+        ],
+        "probability_sum": 1.0
+      },
+      "formula": "H(X) = -Σ_i p_i log_b(p_i)"
+    }
+  ],
+  "skill_instruction": "# 习题求解 Skill\n\n回答课程计算题时，请按下面顺序组织：\n\n1. 列出题目给出的量和需要求出的量。\n2. 写出采用的公式及其适用条件。\n3. 统一单位后代入计算，工具结果不得自行修改。\n4. 给出带单位的最终结果，并进行数量级或边界检查。\n5. 如果条件不足，不猜测缺少的数据，而是指出还需要什么。\n\n本轮已知信息：\n- intent: calculation"
+}

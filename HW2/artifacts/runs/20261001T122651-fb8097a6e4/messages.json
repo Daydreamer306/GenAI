@@ -1,0 +1,14 @@
+[
+  {
+    "round_number": 1,
+    "sender": "solver",
+    "recipient": "reviewer",
+    "content": "# RC 时间常数计算\n\n## 1. 已知量与待求量\n\n| 类型 | 数值 | 单位 |\n|------|------|------|\n| 电阻 R | 1 | kΩ |\n| 电容 C | 1 | μF |\n| **待求量** | **时间常数 τ** | **—** |\n\n## 2. 公式与适用条件\n\n**公式**：\n$$\\tau = R \\times C$$\n\n**适用条件**：适用于一阶 RC 电路的零输入响应或充放电分析，τ 表示电容电压从初值变化到稳态值的约 63.2% 所需的时间。\n\n## 3. 单位统一与计算\n\n将各量转换为 SI 基本单位：\n\n- $R = 1 \\text{ kΩ} = 1 \\times 10^3 \\text{ Ω}$\n- $C = 1 \\text{ μF} = 1 \\times 10^{-6} \\text{ F}$\n\n代入公式：\n$$\\tau = (1 \\times 10^3) \\times (1 \\times 10^{-6}) = 1 \\times 10^{-3} \\text{ s}$$\n\n## 4. 最终结果与检查\n\n$$\\boxed{\\tau = 1.0 \\text{ ms}}$$\n\n**边界检查**：R = 1 kΩ、C = 1 μF 均为典型值，τ = 1 ms 在常见 RC 电路范围内，合理。\n\n---\n\n<final_answer>{\"value\": 0.001, \"unit\": \"s\"}</final_answer>"
+  },
+  {
+    "round_number": 1,
+    "sender": "reviewer",
+    "recipient": "harness",
+    "content": "{\"approved\":true,\"summary\":\"草稿计算正确，使用公式 τ = R × C，单位转换准确（R = 1 kΩ = 10^3 Ω，C = 1 μF = 10^-6 F），得到 τ = 10^-3 s = 1 ms。final_answer 的 value (0.001) 和 unit (s) 与工具结果 time_constant_seconds (0.001) 一致。无引用缺失证据，无实质错误。\",\"issues\":[]}"
+  }
+]

@@ -1,0 +1,321 @@
+{
+  "execution_mode": "live",
+  "model": "MiniMax-M2.7",
+  "note": "真实模型小样本实验；不保证重新运行得到相同输出或准确率。成本使用观测 token，不估算货币费用。",
+  "summary": [
+    {
+      "design": "single_pass",
+      "tasks": 6,
+      "accuracy": 0.8333333333333334,
+      "failure_rate": 0.0,
+      "input_tokens": 2933,
+      "output_tokens": 2867,
+      "model_calls": 6,
+      "average_latency_ms": 7452.532472166543
+    },
+    {
+      "design": "review_loop",
+      "tasks": 6,
+      "accuracy": 1.0,
+      "failure_rate": 0.0,
+      "input_tokens": 7664,
+      "output_tokens": 5382,
+      "model_calls": 12,
+      "average_latency_ms": 16361.946902999383
+    }
+  ],
+  "items": [
+    {
+      "task_id": "entropy-uniform",
+      "design": "single_pass",
+      "correct": true,
+      "expected": {
+        "value": 1.0,
+        "unit": "bit"
+      },
+      "actual": {
+        "value": 1.0,
+        "unit": "bit"
+      },
+      "outcome": "unreviewed",
+      "stop_reason": "review_disabled",
+      "rounds": 1,
+      "run_id": "20261001T122531-a47dc289d3",
+      "execution_mode": "live",
+      "model_calls": 1,
+      "input_tokens": 488,
+      "output_tokens": 663,
+      "total_latency_ms": 9530.500583001412,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "entropy-uniform",
+      "design": "review_loop",
+      "correct": true,
+      "expected": {
+        "value": 1.0,
+        "unit": "bit"
+      },
+      "actual": {
+        "value": 1.0,
+        "unit": "bit"
+      },
+      "outcome": "passed",
+      "stop_reason": "review_approved",
+      "rounds": 1,
+      "run_id": "20261001T122548-8a3f746672",
+      "execution_mode": "live",
+      "model_calls": 2,
+      "input_tokens": 1247,
+      "output_tokens": 970,
+      "total_latency_ms": 16673.395000005257,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "entropy-four",
+      "design": "single_pass",
+      "correct": true,
+      "expected": {
+        "value": 2.0,
+        "unit": "bit"
+      },
+      "actual": {
+        "value": 2.0,
+        "unit": "bit"
+      },
+      "outcome": "unreviewed",
+      "stop_reason": "review_disabled",
+      "rounds": 1,
+      "run_id": "20261001T122557-23ce93f059",
+      "execution_mode": "live",
+      "model_calls": 1,
+      "input_tokens": 506,
+      "output_tokens": 592,
+      "total_latency_ms": 9183.412582991878,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "entropy-four",
+      "design": "review_loop",
+      "correct": true,
+      "expected": {
+        "value": 2.0,
+        "unit": "bit"
+      },
+      "actual": {
+        "value": 2.0,
+        "unit": "bit"
+      },
+      "outcome": "passed",
+      "stop_reason": "review_approved",
+      "rounds": 1,
+      "run_id": "20261001T122615-b8c864474d",
+      "execution_mode": "live",
+      "model_calls": 2,
+      "input_tokens": 1580,
+      "output_tokens": 1232,
+      "total_latency_ms": 17956.467458003317,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "ohms-current",
+      "design": "single_pass",
+      "correct": true,
+      "expected": {
+        "value": 2.0,
+        "unit": "A"
+      },
+      "actual": {
+        "value": 2.0,
+        "unit": "A"
+      },
+      "outcome": "unreviewed",
+      "stop_reason": "review_disabled",
+      "rounds": 1,
+      "run_id": "20261001T122619-64e77cbc74",
+      "execution_mode": "live",
+      "model_calls": 1,
+      "input_tokens": 505,
+      "output_tokens": 219,
+      "total_latency_ms": 4060.322334000375,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "ohms-current",
+      "design": "review_loop",
+      "correct": true,
+      "expected": {
+        "value": 2.0,
+        "unit": "A"
+      },
+      "actual": {
+        "value": 2.0,
+        "unit": "A"
+      },
+      "outcome": "passed",
+      "stop_reason": "review_approved",
+      "rounds": 1,
+      "run_id": "20261001T122628-475b25fcc3",
+      "execution_mode": "live",
+      "model_calls": 2,
+      "input_tokens": 1150,
+      "output_tokens": 472,
+      "total_latency_ms": 9370.526208993397,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "rc-tau",
+      "design": "single_pass",
+      "correct": false,
+      "expected": {
+        "value": 0.001,
+        "unit": "s"
+      },
+      "actual": {
+        "value": 1.0,
+        "unit": "ms"
+      },
+      "outcome": "unreviewed",
+      "stop_reason": "review_disabled",
+      "rounds": 1,
+      "run_id": "20261001T122634-4d3bd7572c",
+      "execution_mode": "live",
+      "model_calls": 1,
+      "input_tokens": 494,
+      "output_tokens": 308,
+      "total_latency_ms": 5246.043333012494,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "rc-tau",
+      "design": "review_loop",
+      "correct": true,
+      "expected": {
+        "value": 0.001,
+        "unit": "s"
+      },
+      "actual": {
+        "value": 0.001,
+        "unit": "s"
+      },
+      "outcome": "passed",
+      "stop_reason": "review_approved",
+      "rounds": 1,
+      "run_id": "20261001T122651-fb8097a6e4",
+      "execution_mode": "live",
+      "model_calls": 2,
+      "input_tokens": 1326,
+      "output_tokens": 996,
+      "total_latency_ms": 17890.24145899748,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "convolution",
+      "design": "single_pass",
+      "correct": true,
+      "expected": {
+        "value": [
+          3,
+          10,
+          8
+        ],
+        "unit": ""
+      },
+      "actual": {
+        "value": [
+          3.0,
+          10.0,
+          8.0
+        ],
+        "unit": ""
+      },
+      "outcome": "unreviewed",
+      "stop_reason": "review_disabled",
+      "rounds": 1,
+      "run_id": "20261001T122702-01f317ba9e",
+      "execution_mode": "live",
+      "model_calls": 1,
+      "input_tokens": 489,
+      "output_tokens": 722,
+      "total_latency_ms": 10932.104124993202,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "convolution",
+      "design": "review_loop",
+      "correct": true,
+      "expected": {
+        "value": [
+          3,
+          10,
+          8
+        ],
+        "unit": ""
+      },
+      "actual": {
+        "value": [
+          3.0,
+          10.0,
+          8.0
+        ],
+        "unit": ""
+      },
+      "outcome": "passed",
+      "stop_reason": "review_approved",
+      "rounds": 1,
+      "run_id": "20261001T122717-ec212403ca",
+      "execution_mode": "live",
+      "model_calls": 2,
+      "input_tokens": 1316,
+      "output_tokens": 1080,
+      "total_latency_ms": 14771.334000004572,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "calculator",
+      "design": "single_pass",
+      "correct": true,
+      "expected": {
+        "value": 20.0,
+        "unit": ""
+      },
+      "actual": {
+        "value": 20.0,
+        "unit": ""
+      },
+      "outcome": "unreviewed",
+      "stop_reason": "review_disabled",
+      "rounds": 1,
+      "run_id": "20261001T122723-3a2149f992",
+      "execution_mode": "live",
+      "model_calls": 1,
+      "input_tokens": 451,
+      "output_tokens": 363,
+      "total_latency_ms": 5762.811874999898,
+      "tool_calls": 1
+    },
+    {
+      "task_id": "calculator",
+      "design": "review_loop",
+      "correct": true,
+      "expected": {
+        "value": 20.0,
+        "unit": ""
+      },
+      "actual": {
+        "value": 20.0,
+        "unit": ""
+      },
+      "outcome": "passed",
+      "stop_reason": "review_approved",
+      "rounds": 1,
+      "run_id": "20261001T122745-e947746fea",
+      "execution_mode": "live",
+      "model_calls": 2,
+      "input_tokens": 1045,
+      "output_tokens": 632,
+      "total_latency_ms": 21509.717291992274,
+      "tool_calls": 1
+    }
+  ]
+}

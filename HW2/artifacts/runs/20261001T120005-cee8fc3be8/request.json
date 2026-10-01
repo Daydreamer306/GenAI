@@ -1,0 +1,14 @@
+{
+  "session_id": "cli-8ec16f82",
+  "turn_id": "9effbc9942d34e078802c318756ebd08",
+  "query": "{\"tool_name\":\"entropy\",\"arguments\":{\"probabilities\":[0.5,0.5]}}",
+  "history": [],
+  "planner": "rules",
+  "enabled_skills": null,
+  "enable_rag": true,
+  "enable_tools": true,
+  "mcp_enabled": true,
+  "enable_review": true,
+  "max_rounds": 3,
+  "structured_answer": false
+}

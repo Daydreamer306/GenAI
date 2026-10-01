@@ -1,0 +1,24 @@
+{
+  "outcome": "unreviewed",
+  "stop_reason": "review_disabled",
+  "rounds": [
+    {
+      "number": 1,
+      "solver_result": {
+        "text": "## 欧姆定律计算电流\n\n### 已知量\n- 电压 $U = 12 \\, \\text{V}$\n- 电阻 $R = 6 \\, \\Omega$\n\n### 需求\n- 电流 $I = ?$\n\n### 公式\n欧姆定律：$I = \\dfrac{U}{R}$\n\n### 代入计算\n$$I = \\frac{12 \\, \\text{V}}{6 \\, \\Omega} = 2 \\, \\text{A}$$\n\n### 结果\n电路中的电流为 **2 A**。\n\n---\n\n<final_answer>{\"value\": 2.0, \"unit\": \"A\"}</final_answer>",
+        "provider": "minimax",
+        "model": "MiniMax-M2.7",
+        "status": "success",
+        "input_tokens": 505,
+        "output_tokens": 219,
+        "reasoning_tokens": 0,
+        "latency_ms": 4052.0507499895757,
+        "finish_reason": "stop",
+        "error_type": null,
+        "error": null
+      },
+      "reviewer_result": null,
+      "verdict": null
+    }
+  ]
+}

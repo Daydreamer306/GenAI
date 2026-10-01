@@ -1,0 +1,8 @@
+{"step_id":1,"stage":"input","name":"输入解析","status":"success","summary":"收到 JSON 工具请求。","latency_ms":0.0,"metadata":{"planner":"rules","rag_enabled":true,"tools_enabled":true,"mcp_enabled":true,"skill_limit":null}}
+{"step_id":2,"stage":"planning","name":"direct_json planner","status":"success","summary":"JSON 输入指定调用 scientific_calculator。","latency_ms":3.601499993237667,"metadata":{"planner":"direct_json","intent":"calculation","need_rag":false,"skills":["problem_solving"],"tools":["scientific_calculator"]}}
+{"step_id":3,"stage":"skill","name":"problem_solving","status":"success","summary":"已将本地 Skill 加入本轮提示词。","latency_ms":0.20662500173784792,"metadata":{}}
+{"step_id":4,"stage":"rag","name":"教材检索","status":"skipped","summary":"规划结果不需要教材证据。","latency_ms":0.0,"metadata":{}}
+{"step_id":5,"stage":"tool","name":"scientific_calculator","status":"success","summary":"工具执行成功。","latency_ms":58.401624992256984,"metadata":{"executor":"mcp_in_process","arguments":{"expression":"(2+3)*4"},"result":{"value":20.0},"artifacts":[]}}
+{"step_id":6,"stage":"model","name":"Solver 第 1 轮","status":"success","summary":"生成草稿","latency_ms":5700.052125001093,"metadata":{"round":1,"agent":"solver","provider":"minimax","model":"MiniMax-M2.7","input_tokens":451,"output_tokens":363,"error_type":null}}
+{"step_id":7,"stage":"stop","name":"Harness 停止","status":"success","summary":"review_disabled","latency_ms":0.0,"metadata":{"outcome":"unreviewed","rounds":1,"max_rounds":3}}
+{"step_id":8,"stage":"answer","name":"最终回答","status":"success","summary":"返回 0 条引用和 1 个工具结果。","latency_ms":0.0,"metadata":{}}

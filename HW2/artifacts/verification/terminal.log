@@ -1,0 +1,272 @@
+
+$ python -m unittest discover -s tests -v
+/Users/yao/Lecture/GenAI/HW2/IE-Agent-提交文件夹/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_all_submission_artifacts_are_written_and_consistent (test_mas_workflow.MASWorkflowTests.test_all_submission_artifacts_are_written_and_consistent) ... ok
+test_answer_checker_rejects_boolean_nan_and_extra_answer_tags (test_mas_workflow.MASWorkflowTests.test_answer_checker_rejects_boolean_nan_and_extra_answer_tags) ... ok
+test_artifact_failure_returns_failed_state (test_mas_workflow.MASWorkflowTests.test_artifact_failure_returns_failed_state) ... ok
+test_artifact_writer_redacts_configured_secret (test_mas_workflow.MASWorkflowTests.test_artifact_writer_redacts_configured_secret) ... ok
+test_comparison_uses_same_tasks_and_separate_designs (test_mas_workflow.MASWorkflowTests.test_comparison_uses_same_tasks_and_separate_designs) ... ok
+test_failed_cli_demo_exits_nonzero (test_mas_workflow.MASWorkflowTests.test_failed_cli_demo_exits_nonzero) ... ok
+test_gate_does_not_accept_wrong_value_based_on_yes_vote (test_mas_workflow.MASWorkflowTests.test_gate_does_not_accept_wrong_value_based_on_yes_vote) ... ok
+test_gate_overrides_fabricated_citation_even_if_reviewer_approves (test_mas_workflow.MASWorkflowTests.test_gate_overrides_fabricated_citation_even_if_reviewer_approves) ... ok
+test_live_benchmark_requires_minimax_key (test_mas_workflow.MASWorkflowTests.test_live_benchmark_requires_minimax_key) ... ok
+test_pass_stops_at_one_round (test_mas_workflow.MASWorkflowTests.test_pass_stops_at_one_round) ... ok
+test_real_tfidf_evidence_is_used_by_both_roles (test_mas_workflow.MASWorkflowTests.test_real_tfidf_evidence_is_used_by_both_roles) ... ok
+test_rejection_feedback_reaches_solver_then_passes (test_mas_workflow.MASWorkflowTests.test_rejection_feedback_reaches_solver_then_passes) ... ok
+test_rejection_is_bounded_and_draft_is_not_accepted (test_mas_workflow.MASWorkflowTests.test_rejection_is_bounded_and_draft_is_not_accepted) ... ok
+test_review_schema_rejects_strings_and_inconsistent_flags (test_mas_workflow.MASWorkflowTests.test_review_schema_rejects_strings_and_inconsistent_flags) ... ok
+test_reviewer_failure_and_invalid_json_never_pass (test_mas_workflow.MASWorkflowTests.test_reviewer_failure_and_invalid_json_never_pass) ... ok
+test_single_pass_is_explicitly_unreviewed (test_mas_workflow.MASWorkflowTests.test_single_pass_is_explicitly_unreviewed) ... ok
+test_solver_failure_exits_without_reviewer (test_mas_workflow.MASWorkflowTests.test_solver_failure_exits_without_reviewer) ... ok
+test_solver_includes_rejection_and_previous_draft_in_next_request (test_mas_workflow.MASWorkflowTests.test_solver_includes_rejection_and_previous_draft_in_next_request) ... ok
+test_tool_validation_failure_stops_before_model (test_mas_workflow.MASWorkflowTests.test_tool_validation_failure_stops_before_model) ... ok
+test_web_chat_returns_review_trace_and_saved_artifacts (test_mas_workflow.MASWorkflowTests.test_web_chat_returns_review_trace_and_saved_artifacts) ... ok
+test_client_uses_minimax_host_and_key (test_model_providers.ModelProviderTests.test_client_uses_minimax_host_and_key) ... ok
+test_deepseek_remains_explicit_and_preserves_parameters (test_model_providers.ModelProviderTests.test_deepseek_remains_explicit_and_preserves_parameters) ... ok
+test_default_factory_selects_minimax (test_model_providers.ModelProviderTests.test_default_factory_selects_minimax) ... ok
+test_generation_omits_deepseek_parameters_and_tracks_provider (test_model_providers.ModelProviderTests.test_generation_omits_deepseek_parameters_and_tracks_provider) ... ok
+test_inline_and_unfinished_thinking_are_not_exposed (test_model_providers.ModelProviderTests.test_inline_and_unfinished_thinking_are_not_exposed) ... ok
+test_invalid_plan_returns_error_for_rule_fallback (test_model_providers.ModelProviderTests.test_invalid_plan_returns_error_for_rule_fallback) ... ok
+test_json_plan_accepts_thinking_and_fences_without_json_mode (test_model_providers.ModelProviderTests.test_json_plan_accepts_thinking_and_fences_without_json_mode) ... ok
+test_missing_minimax_key_never_uses_legacy_key (test_model_providers.ModelProviderTests.test_missing_minimax_key_never_uses_legacy_key) ... ok
+test_native_tool_plan_parses_tools_rag_and_skills (test_model_providers.ModelProviderTests.test_native_tool_plan_parses_tools_rag_and_skills) ... ok
+test_rate_limit_and_auth_errors_do_not_retry_or_fallback (test_model_providers.ModelProviderTests.test_rate_limit_and_auth_errors_do_not_retry_or_fallback) ... ok
+test_truncated_answer_is_not_success (test_model_providers.ModelProviderTests.test_truncated_answer_is_not_success) ... ok
+test_empty_answer_stops (test_review_harness.ReviewHarnessTests.test_empty_answer_stops) ... ok
+test_empty_or_unexpected_model_error_never_passes (test_review_harness.ReviewHarnessTests.test_empty_or_unexpected_model_error_never_passes) ... ok
+test_failure_stops (test_review_harness.ReviewHarnessTests.test_failure_stops) ... ok
+test_hard_gate_overrides_yes_vote (test_review_harness.ReviewHarnessTests.test_hard_gate_overrides_yes_vote) ... ok
+test_repair (test_review_harness.ReviewHarnessTests.test_repair) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 51.307s
+
+OK
+
+$ python -m ie_agent.cli demo --scenario repair
+[离线模拟 Agent 输出] 工具结果用于求解，公式与单位见证据。
+<final_answer>{"value": 1.0, "unit": "bit"}</final_answer>
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | success | 工具执行成功。
+[06] Solver 第 1 轮 | success | 生成草稿
+[07] Reviewer 第 1 轮 | success | 审核已完成
+[08] 审核门 第 1 轮 | error | 审核门驳回，需修订。
+[09] Solver 第 2 轮 | success | 生成草稿
+[10] Reviewer 第 2 轮 | success | 审核已完成
+[11] 审核门 第 2 轮 | success | 数值、单位和证据通过审核。
+[12] Harness 停止 | success | review_approved
+[13] 最终回答 | success | 返回 0 条引用和 1 个工具结果。
+状态：passed；停止原因：review_approved；轮数：2
+模式：simulated；模型调用：4；token：0/0
+运行产物：runs/20261001T122504-0cff2e42d6
+
+$ python -m ie_agent.cli demo --scenario pass
+[离线模拟 Agent 输出] 工具结果用于求解，公式与单位见证据。
+<final_answer>{"value": 1.0, "unit": "bit"}</final_answer>
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | success | 工具执行成功。
+[06] Solver 第 1 轮 | success | 生成草稿
+[07] Reviewer 第 1 轮 | success | 审核已完成
+[08] 审核门 第 1 轮 | success | 数值、单位和证据通过审核。
+[09] Harness 停止 | success | review_approved
+[10] 最终回答 | success | 返回 0 条引用和 1 个工具结果。
+状态：passed；停止原因：review_approved；轮数：1
+模式：simulated；模型调用：2；token：0/0
+运行产物：runs/20261001T122504-57a2efaa77
+
+$ python -m ie_agent.cli demo --scenario reject
+未通过审核，以下内容仅供检查，不是已验收答案。
+
+[离线模拟 Agent 输出] 工具结果用于求解，公式与单位见证据。
+<final_answer>{"value": 2.0, "unit": "bit"}</final_answer>
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | success | 工具执行成功。
+[06] Solver 第 1 轮 | success | 生成草稿
+[07] Reviewer 第 1 轮 | success | 审核已完成
+[08] 审核门 第 1 轮 | error | 审核门驳回，需修订。
+[09] Solver 第 2 轮 | success | 生成草稿
+[10] Reviewer 第 2 轮 | success | 审核已完成
+[11] 审核门 第 2 轮 | error | 审核门驳回，需修订。
+[12] Solver 第 3 轮 | success | 生成草稿
+[13] Reviewer 第 3 轮 | success | 审核已完成
+[14] 审核门 第 3 轮 | error | 审核门驳回，需修订。
+[15] Harness 停止 | error | max_rounds_exceeded
+[16] 最终回答 | error | 返回 0 条引用和 1 个工具结果。
+状态：failed；停止原因：max_rounds_exceeded；轮数：3
+模式：simulated；模型调用：6；token：0/0
+运行产物：runs/20261001T122505-8b3be2abfb
+
+$ python -m ie_agent.cli demo --scenario solver-error
+未通过审核，以下内容仅供检查，不是已验收答案。
+
+远程模型未完成生成，下面保留本地已经得到的结果。
+
+工具 entropy（H(X) = -Σ_i p_i log_b(p_i)）：{"contributions": [0.5, 0.5], "entropy": 1.0, "probability_sum": 1.0, "unit": "bit"}
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | success | 工具执行成功。
+[06] Solver 第 1 轮 | error | 解题模型失败
+[07] Harness 停止 | error | solver_error
+[08] 最终回答 | error | 返回 0 条引用和 1 个工具结果。
+状态：failed；停止原因：solver_error；轮数：1
+模式：simulated；模型调用：1；token：0/0
+运行产物：runs/20261001T122506-b2da76b295
+
+$ python -m ie_agent.cli demo --scenario reviewer-error
+未通过审核，以下内容仅供检查，不是已验收答案。
+
+[离线模拟 Agent 输出] 工具结果用于求解，公式与单位见证据。
+<final_answer>{"value": 1.0, "unit": "bit"}</final_answer>
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | success | 工具执行成功。
+[06] Solver 第 1 轮 | success | 生成草稿
+[07] Reviewer 第 1 轮 | error | 审核不可用，禁止放行
+[08] Harness 停止 | error | reviewer_error
+[09] 最终回答 | error | 返回 0 条引用和 1 个工具结果。
+状态：failed；停止原因：reviewer_error；轮数：1
+模式：simulated；模型调用：2；token：0/0
+运行产物：runs/20261001T122506-28dc6b7851
+
+$ python -m ie_agent.cli demo --scenario invalid-review
+未通过审核，以下内容仅供检查，不是已验收答案。
+
+[离线模拟 Agent 输出] 工具结果用于求解，公式与单位见证据。
+<final_answer>{"value": 1.0, "unit": "bit"}</final_answer>
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | success | 工具执行成功。
+[06] Solver 第 1 轮 | success | 生成草稿
+[07] Reviewer 第 1 轮 | error | 审核不可用，禁止放行
+[08] Harness 停止 | error | reviewer_error
+[09] 最终回答 | error | 返回 0 条引用和 1 个工具结果。
+状态：failed；停止原因：reviewer_error；轮数：1
+模式：simulated；模型调用：2；token：0/0
+运行产物：runs/20261001T122507-67535c1215
+
+$ python -m ie_agent.cli demo --scenario tool-error
+任务未通过：必要工具或教材证据不可用。
+
+远程模型未完成生成，下面保留本地已经得到的结果。
+
+当前没有可展示的工具结果或教材片段，请检查配置后重试。
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | error | 工具执行失败：MCP 调用失败：Error executing tool entropy: probabilities: Value error, 概率之和必须等于 1
+[06] Harness 停止 | error | tool_error
+[07] 最终回答 | error | 返回 0 条引用和 1 个工具结果。
+状态：failed；停止原因：tool_error；轮数：0
+模式：simulated；模型调用：0；token：0/0
+运行产物：runs/20261001T122508-0fdba9e370
+
+$ python -m ie_agent.cli reproduce
+[离线模拟 Agent 输出] 工具结果用于求解，公式与单位见证据。
+<final_answer>{"value": 1.0, "unit": "bit"}</final_answer>
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | success | 工具执行成功。
+[06] Solver 第 1 轮 | success | 生成草稿
+[07] Reviewer 第 1 轮 | success | 审核已完成
+[08] 审核门 第 1 轮 | error | 审核门驳回，需修订。
+[09] Solver 第 2 轮 | success | 生成草稿
+[10] Reviewer 第 2 轮 | success | 审核已完成
+[11] 审核门 第 2 轮 | success | 数值、单位和证据通过审核。
+[12] Harness 停止 | success | review_approved
+[13] 最终回答 | success | 返回 0 条引用和 1 个工具结果。
+状态：passed；停止原因：review_approved；轮数：2
+模式：simulated；模型调用：4；token：0/0
+运行产物：runs/20261001T122509-e58fe9da69
+entropy-uniform | single_pass | unreviewed | gold=未通过 | token=0/0
+entropy-uniform | review_loop | passed | gold=通过 | token=0/0
+entropy-four | single_pass | unreviewed | gold=未通过 | token=0/0
+entropy-four | review_loop | passed | gold=通过 | token=0/0
+ohms-current | single_pass | unreviewed | gold=未通过 | token=0/0
+ohms-current | review_loop | passed | gold=通过 | token=0/0
+rc-tau | single_pass | unreviewed | gold=未通过 | token=0/0
+rc-tau | review_loop | passed | gold=通过 | token=0/0
+convolution | single_pass | unreviewed | gold=未通过 | token=0/0
+convolution | review_loop | passed | gold=通过 | token=0/0
+calculator | single_pass | unreviewed | gold=未通过 | token=0/0
+calculator | review_loop | passed | gold=通过 | token=0/0
+实验报告：runs/comparison-20261001T122509-1d337ebb
+
+$ python -m ie_agent.cli ask {"tool_name": "entropy", "arguments": {"probabilities": [0.5, 0.5]}} --planner rules
+## 熵计算
+
+**已知量：** 概率分布 $p = [0.5, 0.5]$（两个等概率事件）
+
+**待求量：** 信息熵 $H(X)$
+
+---
+
+### 公式
+
+$$H(X) = -\sum_{i=1}^{n} p_i \log_2(p_i)$$
+
+**适用条件：** 离散随机变量，概率分布已知，对数底数为2时单位为 bit。
+
+---
+
+### 代入计算
+
+$$H(X) = -(0.5 \times \log_2(0.5) + 0.5 \times \log_2(0.5))$$
+
+$$= -(0.5 \times (-1) + 0.5 \times (-1))$$
+
+$$= -(-0.5 - 0.5) = 1.0$$
+
+---
+
+### 最终结果
+
+$$\boxed{H(X) = 1.0 \text{ bit}}$$
+
+**检验：** 两个等概率事件的信息熵最大值为 $\log_2(2) = 1$ bit，结果符合预期边界条件。
+[01] 输入解析 | success | 收到 JSON 工具请求。
+[02] direct_json planner | success | JSON 输入指定调用 entropy。
+[03] problem_solving | success | 已将本地 Skill 加入本轮提示词。
+[04] 教材检索 | skipped | 规划结果不需要教材证据。
+[05] entropy | success | 工具执行成功。
+[06] Solver 第 1 轮 | success | 生成草稿
+[07] Reviewer 第 1 轮 | success | 审核已完成
+[08] 审核门 第 1 轮 | success | 草稿完整、正确地计算了等概率分布[0.5, 0.5]的信息熵。公式使用正确（log₂），代入计算无误，最终结果1.0 bit与工具返回值完全一致，单位正确（bit），边界检验（最大熵log₂2=1 bit）合理。符合所有回答要求。
+[09] Harness 停止 | success | review_approved
+[10] 最终回答 | success | 返回 0 条引用和 1 个工具结果。
+状态：passed；停止原因：review_approved；轮数：1
+模式：live；模型调用：2；token：1095/638
+运行产物：runs/20261001T122521-abc888ed52
+
+$ python -m ie_agent.cli benchmark
+entropy-uniform | single_pass | unreviewed | gold=通过 | token=488/663
+entropy-uniform | review_loop | passed | gold=通过 | token=1247/970
+entropy-four | single_pass | unreviewed | gold=通过 | token=506/592
+entropy-four | review_loop | passed | gold=通过 | token=1580/1232
+ohms-current | single_pass | unreviewed | gold=通过 | token=505/219
+ohms-current | review_loop | passed | gold=通过 | token=1150/472
+rc-tau | single_pass | unreviewed | gold=未通过 | token=494/308
+rc-tau | review_loop | passed | gold=通过 | token=1326/996
+convolution | single_pass | unreviewed | gold=通过 | token=489/722
+convolution | review_loop | passed | gold=通过 | token=1316/1080
+calculator | single_pass | unreviewed | gold=通过 | token=451/363
+calculator | review_loop | passed | gold=通过 | token=1045/632
+实验报告：runs/comparison-20261001T122745-cc65f0b7

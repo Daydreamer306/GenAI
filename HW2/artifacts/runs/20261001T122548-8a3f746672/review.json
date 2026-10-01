@@ -1,0 +1,40 @@
+{
+  "outcome": "passed",
+  "stop_reason": "review_approved",
+  "rounds": [
+    {
+      "number": 1,
+      "solver_result": {
+        "text": "## 熵计算\n\n**题目给出的量：**\n- 概率分布：$p = [0.5, 0.5]$\n\n**需要求出的量：**\n- 信息熵 $H(X)$\n\n**采用公式：**\n$$H(X) = -\\sum_{i} p_i \\log_2(p_i)$$\n\n**适用条件：**\n- 概率分布必须归一化（$\\sum p_i = 1$）✓ 已满足\n- 底数取 2 时结果单位为 bit\n\n**代入计算：**\n\n$$H(X) = -[0.5 \\times \\log_2(0.5) + 0.5 \\times \\log_2(0.5)]$$\n$$= -[0.5 \\times (-1) + 0.5 \\times (-1)]$$\n$$= -[-0.5 - 0.5]$$\n$$= 1.0 \\text{ bit}$$\n\n**结果分析：**\n- 每个事件的熵贡献均为 0.5 bit\n- 两个等概率事件的信息熵为 1 bit，符合直觉（二选一的平均信息量）\n\n**最终结果：**\n\n<final_answer>{\"value\": 1.0, \"unit\": \"bit\"}</final_answer>",
+        "provider": "minimax",
+        "model": "MiniMax-M2.7",
+        "status": "success",
+        "input_tokens": 488,
+        "output_tokens": 513,
+        "reasoning_tokens": 0,
+        "latency_ms": 8584.038042012253,
+        "finish_reason": "stop",
+        "error_type": null,
+        "error": null
+      },
+      "reviewer_result": {
+        "text": "{\"approved\": true, \"summary\": \"草稿完整、正确地计算了概率分布[0.5, 0.5]的信息熵。公式使用正确，计算过程无误，最终结果1.0 bit与工具结果完全一致，单位正确。归一化条件已验证。\", \"issues\": []}",
+        "provider": "minimax",
+        "model": "MiniMax-M2.7",
+        "status": "success",
+        "input_tokens": 759,
+        "output_tokens": 457,
+        "reasoning_tokens": 0,
+        "latency_ms": 8083.351499997661,
+        "finish_reason": "stop",
+        "error_type": null,
+        "error": null
+      },
+      "verdict": {
+        "approved": true,
+        "summary": "草稿完整、正确地计算了概率分布[0.5, 0.5]的信息熵。公式使用正确，计算过程无误，最终结果1.0 bit与工具结果完全一致，单位正确。归一化条件已验证。",
+        "issues": []
+      }
+    }
+  ]
+}

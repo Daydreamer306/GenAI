@@ -1,0 +1,14 @@
+{
+  "session_id": "comparison",
+  "turn_id": "8c9f098169f947ada068efda0e676a5a",
+  "query": "{\"tool_name\": \"scientific_calculator\", \"arguments\": {\"expression\": \"(2+3)*4\"}}",
+  "history": [],
+  "planner": "rules",
+  "enabled_skills": null,
+  "enable_rag": true,
+  "enable_tools": true,
+  "mcp_enabled": true,
+  "enable_review": false,
+  "max_rounds": null,
+  "structured_answer": true
+}

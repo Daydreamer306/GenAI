@@ -1,0 +1,8 @@
+[
+  {
+    "round_number": 1,
+    "sender": "solver",
+    "recipient": "harness",
+    "content": "## 计算题求解\n\n**题目给出的量**：表达式 $(2+3)\\times 4$\n\n**需要求出的量**：表达式的值\n\n**采用的公式**：四则运算规则\n\n**计算过程**：\n1. 先计算括号内：$2 + 3 = 5$\n2. 再与4相乘：$5 \\times 4 = 20$\n\n**结果**：20.0\n\n---\n\n<final_answer>{\"value\": 20.0, \"unit\": \"\"}</final_answer>"
+  }
+]

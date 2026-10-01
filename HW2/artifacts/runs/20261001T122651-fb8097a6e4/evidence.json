@@ -1,0 +1,17 @@
+{
+  "query": "{\"tool_name\": \"rc_time_constant\", \"arguments\": {\"resistance\": {\"value\": 1, \"unit\": \"kOhm\"}, \"capacitance\": {\"value\": 1, \"unit\": \"uF\"}}}",
+  "history": [],
+  "sources": [],
+  "tool_evidence": [
+    {
+      "tool_name": "rc_time_constant",
+      "result": {
+        "time_constant_seconds": 0.001,
+        "display_value": 1.0,
+        "display_unit": "ms"
+      },
+      "formula": "τ = R C"
+    }
+  ],
+  "skill_instruction": "# 习题求解 Skill\n\n回答课程计算题时，请按下面顺序组织：\n\n1. 列出题目给出的量和需要求出的量。\n2. 写出采用的公式及其适用条件。\n3. 统一单位后代入计算，工具结果不得自行修改。\n4. 给出带单位的最终结果，并进行数量级或边界检查。\n5. 如果条件不足，不猜测缺少的数据，而是指出还需要什么。\n\n本轮已知信息：\n- intent: calculation\n最终答案必须额外附上一行 <final_answer>{\"value\": 数字或数字数组, \"unit\": \"单位字符串，无量纲用空字符串\"}</final_answer>。电学量与时间使用 SI 单位；这行必须和正文、工具结果一致。"
+}

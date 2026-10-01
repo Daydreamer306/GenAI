@@ -1,0 +1,8 @@
+{
+  "execution_mode": "live",
+  "model_calls": 1,
+  "input_tokens": 494,
+  "output_tokens": 308,
+  "total_latency_ms": 5246.043333012494,
+  "tool_calls": 1
+}

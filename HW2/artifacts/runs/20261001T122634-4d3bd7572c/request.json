@@ -1,0 +1,14 @@
+{
+  "session_id": "comparison",
+  "turn_id": "628a4a15687046fe868e0859f89eba59",
+  "query": "{\"tool_name\": \"rc_time_constant\", \"arguments\": {\"resistance\": {\"value\": 1, \"unit\": \"kOhm\"}, \"capacitance\": {\"value\": 1, \"unit\": \"uF\"}}}",
+  "history": [],
+  "planner": "rules",
+  "enabled_skills": null,
+  "enable_rag": true,
+  "enable_tools": true,
+  "mcp_enabled": true,
+  "enable_review": false,
+  "max_rounds": null,
+  "structured_answer": true
+}

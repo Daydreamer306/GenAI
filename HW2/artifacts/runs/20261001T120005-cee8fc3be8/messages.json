@@ -1,0 +1,14 @@
+[
+  {
+    "round_number": 1,
+    "sender": "solver",
+    "recipient": "reviewer",
+    "content": "## 熵计算\n\n**题目**：计算概率分布 $[0.5, 0.5]$ 的香农熵。\n\n### 1. 已知量与待求量\n\n- 输入概率：$p_1 = 0.5$，$p_2 = 0.5$\n- 待求：熵 $H(X)$，单位为 bit\n\n### 2. 公式\n\n$$H(X) = -\\sum_{i} p_i \\log_2(p_i)$$\n\n适用条件：概率分布各事件互斥、完备，使用以 2 为底的对数时单位为 bit。\n\n### 3. 代入计算\n\n$$H(X) = -(0.5 \\times \\log_2(0.5) + 0.5 \\times \\log_2(0.5))$$\n\n$$H(X) = -(0.5 \\times (-1) + 0.5 \\times (-1))$$\n\n$$H(X) = -(-0.5 - 0.5) = 1.0$$\n\n### 4. 结果\n\n$$\\boxed{H(X) = 1.0 \\text{ bit}}$$\n\n**验证**：\n- 概率和 $= 0.5 + 0.5 = 1.0$ ✓\n- 两事件各贡献 0.5 bit，总熵为最大值 ✓\n- 结果合理：二元均匀分布的信息熵必然为 1 bit"
+  },
+  {
+    "round_number": 1,
+    "sender": "reviewer",
+    "recipient": "harness",
+    "content": "{\"approved\":true,\"summary\":\"草稿正确计算了概率分布[0.5, 0.5]的香农熵，结果1.0 bit与工具返回值一致，公式推导正确，单位无误，验证步骤合理。\",\"issues\":[]}"
+  }
+]

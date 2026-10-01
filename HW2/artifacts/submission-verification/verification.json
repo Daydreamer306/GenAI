@@ -1,0 +1,61 @@
+{
+  "live_tests_enabled": false,
+  "live_textbook_test_enabled": false,
+  "passed": true,
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "command": "python -m ie_agent.cli demo --scenario repair",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "command": "python -m ie_agent.cli demo --scenario pass",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "command": "python -m ie_agent.cli demo --scenario reject",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "passed": true
+    },
+    {
+      "command": "python -m ie_agent.cli demo --scenario solver-error",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "passed": true
+    },
+    {
+      "command": "python -m ie_agent.cli demo --scenario reviewer-error",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "passed": true
+    },
+    {
+      "command": "python -m ie_agent.cli demo --scenario invalid-review",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "passed": true
+    },
+    {
+      "command": "python -m ie_agent.cli demo --scenario tool-error",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "passed": true
+    },
+    {
+      "command": "python -m ie_agent.cli reproduce",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    }
+  ]
+}
