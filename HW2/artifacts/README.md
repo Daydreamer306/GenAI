@@ -35,9 +35,9 @@ MCP 实际计算信息熵，Solver 使用结果回答，Reviewer 审核通过。
 
 提交整理后的新环境复测：[清单](submission-verification/verification.json)、
 [终端记录](submission-verification/terminal.log)。重新建立虚拟环境，按更新的 uv.lock
-导出默认依赖并从已校验的本机 wheel 缓存安装，未使用旧虚拟环境、原教材或真实 key。
+导出默认依赖并从已校验的本机 wheel 缓存安装，未依赖既有虚拟环境、完整教材或真实 key。
 36 项测试和七种成功/失败场景再次通过，真实 TF-IDF 测试使用自编小讲义。
 依赖检查通过，提交版 Web 首页和 OpenAPI schema 均为 HTTP 200。
 
-本次归档不包含完整教材、原教材检索片段、原索引、密钥或本机环境。
+本次归档不包含完整教材或相关检索片段、生成索引、密钥及本机环境。
 GitHub 可公开运行所需的自编小资料位于 `examples/knowledge/`。

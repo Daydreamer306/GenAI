@@ -4,8 +4,8 @@ Solver 生成草稿；Reviewer 独立检查数值、单位、证据和任务约�
 通过则停止，最多三轮。工具失败、证据缺失、模型错误、非法审核 JSON 或轮数耗尽都明确失败。
 课程工具通过实际 MCP 调用；每次问答保存 trace、report、review、messages 和 metrics。
 
-这是原 IE-Agent 小组项目的 HW2 扩展，当前采用自定义 harness，**不使用 AutoGen SDK**。
-原成员：何铭源、郑一鸣、姚舜瑜、徐圣扬。新增贡献与限制见 [设计说明](docs/design.md)。
+当前采用自定义 harness，**不使用 AutoGen SDK**。
+系统设计与限制见 [设计说明](docs/design.md)。
 
 ## 从新克隆开始
 
@@ -21,7 +21,7 @@ uv run --no-dev ie-agent reproduce
 
 `reproduce` 无需 key：调用真实工具，但 Solver/Reviewer 使用标为 simulated 的脚本模型，
 演示“首次错误→驳回→修订→通过”，再比较六题的两种设计。模拟结果不是模型准确率实验。
-建库脚本使用仓库中的自编小讲义，已有索引时不覆盖；它不是原项目完整教材库。
+建库脚本使用仓库中的自编小讲义，已有索引时不覆盖；演示资料不代表完整教材覆盖。
 
 完整离线验证（36 项测试及七类成功/失败场景，预期失败的退出码也会检查）：
 
@@ -38,7 +38,7 @@ uv run --no-dev python scripts/verify_workflow.py
 
 把 `.env.example` 复制为本机 `.env`，填入你自己的 `MINIMAX_API_KEY`。不要提交 `.env`。
 国内账户使用 `https://api.minimax.cn/v1`；默认模型为 MiniMax-M2.7。
-MiniMax 配置缺失或失败不会自动调用旧 DeepSeek key。
+MiniMax 配置缺失或失败不会自动调用 DeepSeek。
 
 ```bash
 cp .env.example .env
@@ -84,7 +84,7 @@ RC 题的 `1 ms` 数学等价于 `0.001 s`，但不符合约定 SI 单位，导�
 新运行自动保存在 `runs/<run-id>/`，这个目录不入 Git，避免大量临时记录混入提交。
 `artifacts/` 是明确精选、脱敏后纳入 Git 的历史证据。
 
-## 可选：原 Qwen 检索路线
+## 可选：Qwen 检索路线
 
 ```bash
 uv sync --locked --extra qwen
@@ -105,13 +105,12 @@ HW2/
   tests/             不依赖私有教材或真实 key 的自动测试
   examples/knowledge/ 自编小资料
   scripts/           安全建库与一键验证
-  evaluation/        固定计算题 gold；旧教材检索题仅作历史参考
+  evaluation/        固定计算题 gold 与教材检索题集
   docs/              作业原文、设计说明、提交清单
   artifacts/         精选真实运行及成本对比
   web/               前端源码、锁文件与构建页面
 ```
 
-不上传 `.env`、虚拟环境、node_modules、完整教材、模型、数据库、临时 runs 或旧小组 PDF。
-这些材料仍保留在原本地项目，不会因整理仓库而删除。
-旧 `evaluation/retrieval_questions.yaml` 依赖完整教材，不能用自编小资料复现旧 Recall@K。
+不上传 `.env`、虚拟环境、node_modules、完整教材、模型、数据库或临时 runs。
+`evaluation/retrieval_questions.yaml` 依赖完整教材，不能用自编小资料复现对应的 Recall@K。
 录屏和 2–4 页说明仍需通过课程渠道提交，见 [提交清单](docs/submission-checklist.md)。
